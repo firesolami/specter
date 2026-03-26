@@ -1,0 +1,125 @@
+.upload-container {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.upload-zone {
+  border: 2px dashed var(--steel-authority);
+  border-radius: 2px;
+  padding: 80px 60px;
+  text-align: center;
+  background: rgba(65, 90, 119, 0.05);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  margin-bottom: 32px;
+}
+
+.upload-zone:hover {
+  border-color: rgba(201, 164, 76, 0.5);
+  background: rgba(201, 164, 76, 0.03);
+}
+
+.upload-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.upload-feature-card {
+  padding: 24px;
+  text-align: center;
+}
+
+/* Analysis Layout */
+.analysis-layout {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 20px;
+  height: calc(100vh - 120px);
+}
+
+.doc-viewer-panel {
+  background: var(--navy-sovereign);
+  border: 1px solid var(--steel-authority);
+  border-top: var(--gold-seam);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.doc-viewer-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(65, 90, 119, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.doc-legend {
+  padding: 10px 20px;
+  display: flex;
+  gap: 16px;
+  border-bottom: 1px solid rgba(65, 90, 119, 0.2);
+  flex-shrink: 0;
+}
+
+.doc-text-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.doc-line {
+  padding: 2px 6px;
+  margin: 0;
+  color: var(--silver-counsel);
+  border-radius: 1px;
+  font-size: 12px !important;
+}
+
+.doc-line.high-risk-line {
+  background: rgba(192, 57, 43, 0.15);
+  color: var(--parchment);
+  border-left: 2px solid var(--crimson-flag);
+  padding-left: 8px;
+}
+
+.doc-line.medium-risk-line {
+  background: rgba(201, 164, 76, 0.1);
+  color: var(--parchment);
+  border-left: 2px solid rgba(201, 164, 76, 0.6);
+  padding-left: 8px;
+}
+
+.doc-line.safe-line {
+  background: rgba(26, 122, 74, 0.08);
+}
+
+.analysis-panel {
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* Risk circle */
+.risk-circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.risk-circle-num {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 900px) {
+  .analysis-layout { grid-template-columns: 1fr; height: auto; }
+  .doc-viewer-panel { height: 300px; }
+  .upload-features { grid-template-columns: 1fr; }
+  .upload-zone { padding: 40px 20px; }
+}
