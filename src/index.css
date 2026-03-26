@@ -511,7 +511,6 @@ input, textarea, select {
 
 /* ---- Sidebar Layout ---- */
 .app-layout {
-  display: flex;
   min-height: 100vh;
 }
 
@@ -531,7 +530,6 @@ input, textarea, select {
 
 .content-area {
   margin-left: var(--sidebar-width);
-  flex: 1;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -540,6 +538,7 @@ input, textarea, select {
 .content-inner {
   max-width: var(--max-content);
   width: 100%;
+  margin: 0 auto;
   padding: 32px;
 }
 
