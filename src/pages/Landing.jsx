@@ -64,7 +64,7 @@ export default function Landing() {
             </p>
             <div className="hero-ctas">
               <Link to="/auth" className="btn btn-gold btn-lg">Begin Your Case</Link>
-              <Link to="/dashboard" className="btn btn-ghost btn-lg">Watch Demo →</Link>
+              <a href="https://drive.google.com/file/d/1Pfnx-zoEUy0b7WpKGuL3lERwpDsjd0LS/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-ghost btn-lg">Watch Demo →</a>
             </div>
             <div className="hero-social">
               <div className="avatar-group">
